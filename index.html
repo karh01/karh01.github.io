@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Colbert's Designs</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="h1">Colbert's Designs</h1>
+      <nav>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="https://www.facebook.com/profile.php?id=61551657556827">Shop</a> <!--API info?-->
+        <a href="#Custom">Custom</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="Home" class="wave-container">
+        <!--This is the image no actual content will go here-->
+      </section>
+
+      <section id="About">
+        <h1>About Us!</h1>
+        <div class="about" style="width: 1150px; height: 480px; background: #3D5361; position: center;">
+          <div class="pink-box">
+            <h3>Our Values</h3>
+            <p>At Colbert's Designs, we believe in inclusivity, sustainability, and ethical practices. We work with suppliers who share our values and prioritize transparency and fairness. We're constantly striving to minimize our environmental footprint and make a positive impact in our community.</p>
+          </div>
+          <div class="pink-box">
+            <h3>Our Mission</h3>
+            <p>Our mission is to make fashion accessible to everyone. We want to help you express your unique style and feel confident in your own skin. We're always working to improve our selection and offer the best possible customer experience.</p>
+          </div>
+          <div class="pink-box">
+            <h3>Our Story</h3>
+            <p>At Colbert's Designs, we believe that everyone deserves to look and feel their best. That's why we started our store, to provide stylish and affordable clothing for all. We're committed to offering high-quality pieces that will last and always staying on top of the latest trends.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Product">
+        <div class="product-box">
+          <h2>PRODUCT</h2>
+        </div>
+        <div class="blue_box">
+          <div class="gallery-container">
+            <div class="gallery">
+              <img src="GMA.jpg" alt="Product 1" class="item">
+              <img src="Attitude.jpg" alt="Product 2" class="item">
+              <img src="fatherhood.jpg" alt="Product 3" class="item">
+              <img src="mermaw.jpg" alt="Product 4" class="item">
+              <img src="worthy.jpg" alt="Product 5" class="item">
+              <img src="god.jpg" alt="Product 6" class="item">
+              <img src="grinch.jpg" alt="Product 7" class="item">
+            </div>
+          </div>
+          <div class="shop-button">
+            <button><a href="https://www.facebook.com/profile.php?id=61551657556827">SHOP</a></button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        let scrollIndex = 0;
+
+        function scrollGallery(direction) {
+          const gallery = document.querySelector('.gallery');
+          const itemWidth = document.querySelector('.item').offsetWidth;
+          const maxScroll = gallery.scrollWidth - gallery.offsetWidth;
+
+          scrollIndex = Math.max(0, Math.min(scrollIndex + direction, maxScroll / itemWidth));
+          gallery.style.transform = `translateX(${-scrollIndex * itemWidth}px)`;
+        }
+      </script>
+
+      <section id="Custom">
+        <h2>CUSTOM</h2>
+      </section>
+    </main>
+
+    <footer>
+      <section id="Contact"> <!--Contact form will go here-->
+        <div class="contact-form">
+          <div class="white-box">
+            <div class="pink-box2">
+             <img src="kailee.jpg" alt="Colberts Designs owner Kailee">
+            </div>
+            <h2>Let's Chat!</h2>
+            <form action="https://formspree.io/f/xdoqnaov" method="POST">
+              <label>
+                Your Name:
+                <input type="name" name="name">
+              </label>
+              <label>
+                Your Email:
+                <input type="email" name="email">
+              </label>
+              <label>
+                Your Message:
+                <textarea name="message"></textarea>
+              </label>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <p>All rights reserved</p>
+    </footer>
+  </body>
+</html>
