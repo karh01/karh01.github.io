@@ -348,11 +348,6 @@ border-radius: 4px; /* Radius of the track */
       max-width: fit-content;
     }
 
-    .about > div {
-      width: calc(33.33% - 20px); /* Adjust width based on the number of items per row */
-      margin: 10px;
-      text-align: center;
-    }
 
     .Contact {
       max-width: fit-content;
