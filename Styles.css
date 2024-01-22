@@ -43,7 +43,7 @@ body {
   #Home {
     height: 550px; /* Set the height of the parallax section */
     background-color: #D6B7B5;
-    background-image: url('ColbertsLOGO.png');
+    background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t1.15752-9/385551455_3888851018068246_192134246888051073_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=VLMvJQB_ugYAX-zGola&_nc_ht=scontent-dfw5-2.xx&oh=03_AdSMEgM5x79Cg1C5x_hSNx_dnRdDhCV3pAGe8AlVsulK8Q&oe=65D42A20');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,6 +151,7 @@ transform: translateY(-50%); /* Correctly center the box using translateY */
   .contact-form {
     max-width: 400px;
     margin: 0 auto;
+    min-width: auto;
   }
 
   .form-group {
@@ -299,7 +300,7 @@ border-radius: 4px; /* Radius of the track */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 790px) {
     body {
       margin: 0;
       font-family: poppins;
@@ -344,6 +345,17 @@ border-radius: 4px; /* Radius of the track */
       text-align: center;
       padding-bottom: 50px;
       padding-top: 3.5%;
+      max-width: fit-content;
+    }
+
+    .about > div {
+      width: calc(33.33% - 20px); /* Adjust width based on the number of items per row */
+      margin: 10px;
+      text-align: center;
+    }
+
+    .Contact {
+      max-width: fit-content;
     }
 
     .product-box {
